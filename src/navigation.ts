@@ -23,7 +23,7 @@ export const footerData = {
         { text: 'Script Runner', href: '#' },
         { text: 'Network Policies', href: '#' },
         { text: 'Pricing', href: getPermalink('/pricing') },
-        { text: 'MSR', href: getPermalink('http://msrproject.com/') },
+        { text: 'MSR', href: getPermalink('http://msrproject.org/') },
       ],
     },
     {
