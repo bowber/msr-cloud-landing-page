@@ -6,6 +6,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Note from '~/components/widgets/Note.astro';
 
 const metadata = {
   title: 'Pricing',
@@ -17,7 +18,7 @@ const metadata = {
 
   <HeroText
     tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
+    title="Simple pricing for everyone"
     subtitle="Choose the perfect plan that aligns with your cosmic goals."
   />
 
@@ -28,22 +29,28 @@ const metadata = {
     subtitle="Only pay for what you need"
     prices={[
       {
-        title: 'basic',
+        title: 'Free',
         subtitle: 'Optimal choice for personal use',
-        price: 29,
-        period: 'per month',
+        price: '0',
+        period: 'Forever',
         items: [
           {
-            description: 'Etiam in libero, et volutpat',
+            description: 'Max 3 Services/Script Runners',
           },
           {
-            description: 'Aenean ac nunc dolor tristique',
+            description: 'Max 0.5 vCPU + 1 GiB RAM per service',
           },
           {
-            description: 'Cras scelerisque accumsan lib',
+            description: '*Max 400 CPs + 800 RPs (~1 instance with 0.5 vPU + 1 GiB RAM running non-stop)',
           },
           {
-            description: 'In hac habitasse',
+            description: 'Custom region (us, eu, asia, etc.)',
+          },
+          {
+            description: 'Network Policies',
+          },
+          {
+            description: 'Max 250 GB bandwidth',
           },
         ],
         callToAction: {
@@ -54,24 +61,27 @@ const metadata = {
       },
       {
         title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
+        subtitle: 'Optimal choice for most teams',
+        price: 9.99,
+        period: 'per Month',
         items: [
           {
-            description: 'Proin vel laoreet',
+            description: 'Max 20 Services/Script Runners',
           },
           {
-            description: 'Ut efficitur habitasse egestas',
+            description: 'Max 2 vCPU + 4 GiB RAM per service',
           },
           {
-            description: 'Volutpat hac curabitur',
+            description: 'Max 1,200 CPs + 2,400 RPs (~3 instance with 0.5 vCPU + 1 GiB RAM running non-stop)',
           },
           {
-            description: 'Pellentesque blandit ut nibh',
+            description: 'Custom region (us, eu, asia, etc.)',
           },
           {
-            description: 'Donec fringilla sem',
+            description: 'Network Policies',
+          },
+          {
+            description: 'Max 750 GB bandwidth',
           },
         ],
         callToAction: {
@@ -83,22 +93,98 @@ const metadata = {
         ribbonTitle: 'popular',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: 'Pro',
+        subtitle: 'Optimal choice for startups',
+        price: 24.9,
+        period: 'per Month',
         items: [
           {
-            description: 'Curabitur suscipit risus',
+            description: 'Max 50 Services/Script Runners',
           },
           {
-            description: 'Aliquam habitasse malesuada',
+            description: 'Max 2 vCPU + 4 GiB RAM per service',
           },
           {
-            description: 'Suspendisse sit amet blandit',
+            description: 'Max 4,000 CPs + 8,000 RPs (~10 instance with 0.5 vCPU + 1 GiB RAM running non-stop)',
           },
           {
-            description: 'Suspendisse auctor blandit dui',
+            description: 'Custom region (us, eu, asia, etc.)',
+          },
+          {
+            description: 'Network Policies',
+          },
+          {
+            description: 'Max 2.5 TB bandwidth',
+          },
+        ],
+        hasRibbon: true,
+        ribbonTitle: 'best value',
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+      {
+        title: 'Enterprise 1',
+        subtitle: 'Optimal choice for companies with moderate service workloads',
+        price: 99.9,
+        period: 'per Month',
+        items: [
+          {
+            description: 'Max 500 Services/Script Runners',
+          },
+          {
+            description: 'Max 8 vCPU + 16 GiB RAM per service',
+          },
+          {
+            description: 'Max 12,000 CPs + 24,000 RPs (~30 instance with 0.5 vCPU + 1 GiB RAM running non-stop)',
+          },
+          {
+            description: 'Custom region (us, eu, asia, etc.)',
+          },
+          {
+            description: 'Network Policies',
+          },
+          {
+            description: 'Max 5 TB bandwidth',
+          },
+          {
+            description: 'Higher-performance CPU and RAM system',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+      {
+        title: 'Enterprise 2',
+        subtitle: 'Optimal choice for companies with high service workloads',
+        price: 499,
+        period: 'per Month',
+        items: [
+          {
+            description: 'Unlimited Services/Script Runners',
+          },
+          {
+            description: 'Max 8 vCPU + 16 GiB RAM per service',
+          },
+          {
+            description: 'Max 60,000 CPs + 120,000 RPs (~150 instance with 0.5 vCPU + 1 GiB RAM running non-stop)',
+          },
+          {
+            description: 'Custom region (us, eu, asia, etc.)',
+          },
+          {
+            description: 'Network Policies',
+          },
+          {
+            description: 'Max 25 TB bandwidth',
+          },
+          {
+            description: 'Higher-performance CPU and RAM system',
           },
         ],
         callToAction: {
@@ -110,120 +196,28 @@ const metadata = {
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
-    columns={2}
-    items={[
-      {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
-        icon: 'tabler:stairs',
-      },
-      {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
-        icon: 'tabler:flip-vertical',
-      },
-      {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
-        icon: 'tabler:shield-lock',
-      },
-      {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
-        icon: 'tabler:accessible',
-      },
-      {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
-        icon: 'tabler:chevrons-up',
-      },
-      {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
-        icon: 'tabler:headset',
-      },
-    ]}
-    classes={{ container: 'max-w-5xl' }}
+  <Note
+    text="*Max 400 CPs + 800 RPs for free plan is only applies to verified users. It will be only 40 CPs + 80 RPs for non-verified users."
   />
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
-    isReversed={true}
-    items={[
+  <Prices
+    title="Additional Purchases"
+    subtitle="Don't want to upgrade your plan for a sudden need? Just buy additional resources. Which will be used after reaching monthly quotas of your current plan."
+    prices={[
       {
-        title: 'Explore plans',
-        icon: 'tabler:number-1',
+        title: 'CPU Points',
+        price: '10',
+        period: 'per 4,000 CPs',
       },
       {
-        title: 'Select a plan',
-        icon: 'tabler:number-2',
+        title: 'RAM Points',
+        price: '10',
+        period: 'per 8,000 RPs',
       },
       {
-        title: 'Sign Up / Log In',
-        icon: 'tabler:number-3',
-      },
-      {
-        title: 'Review order',
-        icon: 'tabler:number-4',
-      },
-      {
-        title: 'Enter payment details',
-        icon: 'tabler:number-5',
-      },
-      {
-        title: 'Confirmation',
-        icon: 'tabler:number-6',
-      },
-      {
-        title: 'Download and start using the template(s)',
-        icon: 'tabler:number-7',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
-    columns={1}
-    items={[
-      {
-        title: 'Do the plans come with customer support?',
-        description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
-      },
-      {
-        title: 'Is there a trial period for the different plans?',
-        description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
-      },
-      {
-        title: 'Can I switch between plans?',
-        description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
-      },
-      {
-        title: 'What payment methods do you accept?',
-        description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
-      },
-      {
-        title: 'Are there any hidden fees beyond the displayed cost?',
-        description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+        title: 'Bandwidth',
+        price: '10',
+        period: 'per 2,500 GB',
       },
     ]}
   />
@@ -231,12 +225,12 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="Ready to spin up your projects?"
+    subtitle="Get started with a free trial. No credit card required."
     actions={[
       {
         variant: 'primary',
-        text: 'Get started now',
+        text: 'Get started',
         href: '/',
       },
     ]}
