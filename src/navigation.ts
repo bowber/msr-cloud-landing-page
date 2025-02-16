@@ -11,7 +11,7 @@ export const headerData = {
       href: getPermalink('/pricing'),
     },
   ],
-  actions: [{ text: 'Console', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Console', href: 'https://console.msrproject.org', target: '_blank' }],
 };
 
 export const footerData = {
